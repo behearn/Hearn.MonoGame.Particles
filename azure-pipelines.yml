@@ -30,4 +30,5 @@ steps:
 - task: PublishPipelineArtifact@1
   inputs:
     path: $(System.DefaultWorkingDirectory)/Hearn.MonoGame.Particles/bin/Windows/x86/Debug/Hearn.MonoGame.Particles.dll
+    path: $(System.DefaultWorkingDirectory)/particles.nuspec
     artifact: drop
