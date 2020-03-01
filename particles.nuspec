@@ -11,10 +11,10 @@
         <requireLicenseAcceptance>false</requireLicenseAcceptance>
         <releaseNotes>Initial Release</releaseNotes>
         <description>MonoGame implementation of https://github.com/city41/particle.js</description>
-        <copyright>Copyright ©2020 Brian Hearn</copyright>
+        <copyright>Copyright Â©2020 Brian Hearn</copyright>
         <tags>MonoGame Particles</tags>
     </metadata>
 	<files>
-		<file src="bin\Windows\x86\Release\Hearn.MonoGame.Particles.dll" target="lib\net45\Hearn.MonoGame.Particles.dll" />    
+		<file src="Hearn.MonoGame.Particles\bin\Windows\x86\Release\Hearn.MonoGame.Particles.dll" target="lib\net45\Hearn.MonoGame.Particles.dll" />    
 	</files>
 </package>
