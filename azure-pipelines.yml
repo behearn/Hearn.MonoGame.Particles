@@ -29,5 +29,5 @@ steps:
 
 - task: PublishPipelineArtifact@1
   inputs:
-    path: $(System.DefaultWorkingDirectory)/bin
+    path: $(System.DefaultWorkingDirectory)/Hearn.MonoGame.Particles/bin/Windows/x86/Debug/Hearn.MonoGame.Particles.dll
     artifact: drop
