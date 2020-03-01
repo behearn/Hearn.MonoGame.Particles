@@ -15,6 +15,6 @@
         <tags>MonoGame Particles</tags>
     </metadata>
 	<files>
-		<file src="Hearn.MonoGame.Particles.dll" target="lib\net45\Hearn.MonoGame.Particles.dll" />    
+		<file src="bin\Windows\x86\Release\Hearn.MonoGame.Particles.dll" target="lib\net45\Hearn.MonoGame.Particles.dll" />    
 	</files>
 </package>
