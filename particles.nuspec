@@ -14,4 +14,7 @@
         <copyright>Copyright ©2020 Brian Hearn</copyright>
         <tags>MonoGame Particles</tags>
     </metadata>
+	<files>
+		<file src="Hearn.MonoGame.Particles.dll" target="lib\net45\Hearn.MonoGame.Particles.dll" />    
+	</files>
 </package>

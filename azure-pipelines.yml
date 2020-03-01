@@ -27,8 +27,17 @@ steps:
 #    platform: '$(buildPlatform)'
 #    configuration: '$(buildConfiguration)'
 
+- task: CopyFiles@2
+  inputs:
+    contents: $(System.DefaultWorkingDirectory)/particles.nuspec
+    targetFolder: $(Build.ArtifactStagingDirectory)
+
+- task: CopyFiles@2
+  inputs:
+    contents: $(System.DefaultWorkingDirectory)/Hearn.MonoGame.Particles/bin/Windows/x86/Debug/Hearn.MonoGame.Particles.dll
+    targetFolder: $(Build.ArtifactStagingDirectory)
+
 - task: PublishPipelineArtifact@1
   inputs:
-    path: $(System.DefaultWorkingDirectory)/Hearn.MonoGame.Particles/bin/Windows/x86/Debug/Hearn.MonoGame.Particles.dll
-    path: $(System.DefaultWorkingDirectory)/particles.nuspec
+    path: $(Build.ArtifactStagingDirectory)
     artifact: drop
