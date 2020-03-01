@@ -27,7 +27,8 @@ steps:
 #    platform: '$(buildPlatform)'
 #    configuration: '$(buildConfiguration)'
 
-- task: PublishBuildArtifacts@1
+steps:
+- task: PublishPipelineArtifact@1
   inputs:
-    pathtoPublish: '$(Build.ArtifactStagingDirectory)'
-    artifactName: drop
+    path: $(System.DefaultWorkingDirectory)/bin
+    artifact: drop
