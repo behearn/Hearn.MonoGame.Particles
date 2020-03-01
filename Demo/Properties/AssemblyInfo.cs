@@ -5,12 +5,12 @@ using System.Runtime.InteropServices;
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information
 // associated with an assembly.
-[assembly: AssemblyTitle("Hearn.MonoGame.Particles")]
-[assembly: AssemblyProduct("Hearn.MonoGame.Particles")]
+[assembly: AssemblyTitle("Demo")]
+[assembly: AssemblyProduct("Demo")]
 [assembly: AssemblyConfiguration("")]
-[assembly: AssemblyDescription("Particle Emitter for MonoGame")]
-[assembly: AssemblyCompany("brianhearn.com")]
-[assembly: AssemblyCopyright("Brian Hearn (c) 2020")]
+[assembly: AssemblyDescription("")]
+[assembly: AssemblyCompany("HP Inc.")]
+[assembly: AssemblyCopyright("Copyright © HP Inc. 2020")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
 
@@ -20,7 +20,7 @@ using System.Runtime.InteropServices;
 [assembly: ComVisible(false)]
 
 // The following GUID is for the ID of the typelib if this project is exposed to COM
-[assembly: Guid("36a9ab7e-8bf1-4209-befa-24e20b4994a4")]
+[assembly: Guid("8acf79bb-83d5-4431-9400-43c0d747a5d2")]
 
 // Version information for an assembly consists of the following four values:
 //

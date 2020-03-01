@@ -1,10 +1,10 @@
-﻿using Microsoft.Xna.Framework;
+﻿using Hearn.MonoGame.Particles;
+using Microsoft.Xna.Framework;
 using Microsoft.Xna.Framework.Graphics;
 using Microsoft.Xna.Framework.Input;
-using System;
 using System.Collections.Generic;
 
-namespace Hearn.MonoGame.Particles
+namespace Demo
 {
     public class Game1 : Game
     {

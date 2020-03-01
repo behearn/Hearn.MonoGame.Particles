@@ -1,8 +1,7 @@
 ﻿using System;
 
-namespace Hearn.MonoGame.Particles
+namespace Demo
 {
-#if WINDOWS || LINUX
     /// <summary>
     /// The main class.
     /// </summary>
@@ -18,5 +17,4 @@ namespace Hearn.MonoGame.Particles
                 game.Run();
         }
     }
-#endif
 }

@@ -7,7 +7,7 @@ using System.Threading.Tasks;
 
 namespace Hearn.MonoGame.Particles
 {
-    class EmitterLibrary
+    public class EmitterLibrary
     {
 
         public static Emitter Fire(Vector2 pos)
