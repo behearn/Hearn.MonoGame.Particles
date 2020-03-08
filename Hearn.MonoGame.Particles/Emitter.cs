@@ -99,6 +99,7 @@ namespace Hearn.MonoGame.Particles
         {
 
             var delta = (float)gameTime.ElapsedGameTime.TotalMilliseconds;
+            var deltaSeconds = delta / 1000;
 
             _elapsed += delta;
 
@@ -109,7 +110,7 @@ namespace Hearn.MonoGame.Particles
                 // emit new particles based on how much time has passed and the emission rate
 
                 var rate = 1.0f / EmissionRate;
-                _emitCounter += delta;
+                _emitCounter += deltaSeconds;
 
                 while (!IsFull() && _emitCounter > rate)
                 {
@@ -125,7 +126,7 @@ namespace Hearn.MonoGame.Particles
                 while (_particleIndex < _particleCount)
                 {
                     var particle = Particles[_particleIndex];
-                    UpdateParticle(particle, delta, _particleIndex);
+                    UpdateParticle(particle, deltaSeconds, _particleIndex);
                 }
             }
 
@@ -191,9 +192,11 @@ namespace Hearn.MonoGame.Particles
             var life = Life + (LifeVar * _rnd.NextFloat(-1, 1));
             particle.Life = Math.Max(0, life);
 
+            life /= 1000;
+
             particle.Scale = new Vector2(StartScale, StartScale);
             particle.DeltaScale = EndScale - StartScale;
-            particle.DeltaScale /= particle.Life;
+            particle.DeltaScale /= life;
 
             var startColor = new Color();
             startColor.R = (byte)(StartColor.R + (StartColorVar.R * _rnd.NextDouble(-1, 1)));
@@ -211,10 +214,10 @@ namespace Hearn.MonoGame.Particles
 
             particle.Color = StartColor;
 
-            particle.DeltaColor[0] = (EndColor.R - StartColor.R) / particle.Life;
-            particle.DeltaColor[1] = (EndColor.G - StartColor.G) / particle.Life;
-            particle.DeltaColor[2] = (EndColor.B - StartColor.B) / particle.Life;
-            particle.DeltaColor[3] = (EndColor.A - StartColor.A) / particle.Life;
+            particle.DeltaColor[0] = (EndColor.R - StartColor.R) / life;
+            particle.DeltaColor[1] = (EndColor.G - StartColor.G) / life;
+            particle.DeltaColor[2] = (EndColor.B - StartColor.B) / life;
+            particle.DeltaColor[3] = (EndColor.A - StartColor.A) / life;
 
             for (var i = 0; i < 4; i++)
             {
