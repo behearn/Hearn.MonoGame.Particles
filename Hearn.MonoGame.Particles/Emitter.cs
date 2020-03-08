@@ -98,7 +98,7 @@ namespace Hearn.MonoGame.Particles
         public void Update(GameTime gameTime)
         {
 
-            var delta = (float)gameTime.ElapsedGameTime.TotalSeconds;
+            var delta = (float)gameTime.ElapsedGameTime.TotalMilliseconds;
 
             _elapsed += delta;
 
@@ -133,7 +133,12 @@ namespace Hearn.MonoGame.Particles
 
         public void Draw(SpriteBatch spriteBatch, Texture2D texture)
         {
-            for (var i = 0; i < Particles.Length; i++)
+            if (texture == null)
+            {
+                throw new ArgumentException("Texture is null");
+            }
+
+            for (var i = 0; i < Particles?.Length; i++)
             {
                 var particle = Particles[i];
                 if (particle.Life > 0)
